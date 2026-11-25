@@ -18,7 +18,8 @@ function showView(name) {
 }
 
 document.querySelectorAll('[data-go]').forEach((button) => button.addEventListener('click', () => showView(button.dataset.go)));
-document.querySelector('[data-placeholder]').addEventListener('click', (event) => {
+const placeholderLink = document.querySelector('[data-placeholder]');
+if (placeholderLink) placeholderLink.addEventListener('click', (event) => {
   event.preventDefault();
   window.alert('Placeholder: URL materi pameran belum tersedia.');
 });
