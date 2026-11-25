@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Dashboard admin buku tamu Gebyar Literasi SMAN 1 Boyolangu" />
+    <meta name="theme-color" content="#f3ebdd" />
+    <title>Dashboard Admin — Gebyar Literasi</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+  </head>
+  <body>
+    <main class="app-shell admin-shell">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="Kembali ke buku tamu"><span class="brand-mark" aria-hidden="true">GL</span><span><strong>SMAN 1 Boyolangu</strong><small>Gebyar Literasi · Gelar Karya</small></span></a>
+        <a class="edition" href="index.html">← Buku tamu</a>
+      </header>
+      <section class="admin-view" aria-labelledby="admin-title">
+        <p class="eyebrow">PENGELOLAAN BUKU TAMU</p>
+        <div class="admin-heading"><div><h1 id="admin-title">Dashboard <em>pengunjung.</em></h1><p>Data tersimpan secara lokal di browser ini.</p></div><div class="visitor-total" aria-live="polite"><strong id="visitor-count">—</strong><span>JUMLAH PENGUNJUNG</span></div></div>
+        <div class="admin-tools"><label for="visitor-search">Cari nama</label><input id="visitor-search" type="search" placeholder="Ketik nama pengunjung…" autocomplete="off" /><button class="button button-secondary" id="refresh-visitors" type="button">Muat ulang</button></div>
+        <section class="backup-panel" aria-labelledby="backup-title">
+          <h2 id="backup-title">Ekspor, backup &amp; restore</h2>
+          <p>Backup JSON mencakup seluruh data dan tanda tangan. Simpan file hasil unduhan di tempat yang aman.</p>
+          <div class="backup-actions"><button class="button button-primary" id="export-backup" type="button">Buat backup JSON</button><label class="button button-secondary file-picker" for="backup-file">Pilih file backup</label><input id="backup-file" type="file" accept=".json,application/json" /></div>
+          <div id="restore-options" hidden>
+            <p id="restore-summary" role="status"></p>
+            <fieldset><legend>Jika ada ID yang sudah tersimpan</legend>
+              <label><input type="radio" name="conflict-policy" value="abort" checked /> Batalkan seluruh pemulihan jika ada ID bertabrakan</label>
+              <label><input type="radio" name="conflict-policy" value="skip" /> Lewati data yang ID-nya sudah ada; tambahkan sisanya</label>
+            </fieldset>
+            <button class="button button-primary" id="restore-backup" type="button" disabled>Pulihkan data</button>
+          </div>
+          <p class="backup-status" id="backup-status" role="status" aria-live="polite"></p>
+        </section>
+        <p class="admin-message" id="admin-message" role="status" aria-live="polite">Memuat data pengunjung…</p>
+        <div class="visitor-list" id="visitor-list" aria-live="polite"></div>
+      </section>
+      <footer class="site-footer"><span>© SMAN 1 BOYOLANGU</span><span>DATA TERSIMPAN DI PERANGKAT INI</span><span>GONDANG, JAWA TIMUR</span></footer>
+    </main>
+    <script type="module" src="assets/js/admin.js"></script>
+  </body>
+</html>

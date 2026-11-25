@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Buku tamu digital Gebyar Literasi – Gelar Karya SMAN 1 Boyolangu" />
+    <meta name="theme-color" content="#f3ebdd" />
+    <title>Buku Tamu — Gebyar Literasi</title>
+    <link rel="stylesheet" href="assets/css/base.css" />
+  </head>
+  <body>
+    <main id="app" class="app-shell">
+      <header class="site-header">
+        <a class="brand" href="#home" aria-label="Beranda Gebyar Literasi">
+          <span class="brand-mark" aria-hidden="true">GL</span>
+          <span><strong>SMAN 1 Boyolangu</strong><small>Gebyar Literasi · Gelar Karya</small></span>
+        </a>
+        <a class="edition admin-entry" href="admin.html">Dashboard admin <span aria-hidden="true">→</span></a>
+      </header>
+
+      <section class="view welcome-view" data-view="home" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">SEBUAH PERJALANAN PENGETAHUAN</p>
+          <h1 id="hero-title">Cerita dan karya<br /><em>dari Gondang.</em></h1>
+          <p class="hero-description">Selamat datang di Gelar Karya Gebyar Literasi SMAN 1 Boyolangu. Mari menjelajahi gagasan, budaya, dan cerita dari Kecamatan Gondang.</p>
+          <div class="hero-actions">
+            <button class="button button-primary" data-go="register">Isi buku tamu <span aria-hidden="true">→</span></button>
+            <span class="action-note">Hanya perlu sekitar 1 menit</span>
+          </div>
+          <div class="event-meta"><span>24° 03′ LS</span><span class="meta-rule"></span><span>GONDANG, TULUNGAGUNG</span></div>
+        </div>
+        <aside class="atlas-card" aria-label="Informasi acara">
+          <div class="atlas-top"><span>JAWA TIMUR · INDONESIA</span><span class="atlas-index">01 / 03</span></div>
+          <div class="map-art" aria-hidden="true">
+            <svg viewBox="0 0 440 340" role="img" aria-label="Ilustrasi kontur peta">
+              <path class="contour" d="M-20 75C53 14 76 116 143 72s92-39 132-4 89 21 181-30M-16 116c76-58 99 46 166 2s92-39 132-4 89 21 181-30M-9 160c76-58 99 46 166 2s92-39 132-4 89 21 181-30M-7 207c76-58 99 46 166 2s92-39 132-4 89 21 181-30M-9 255c76-58 99 46 166 2s92-39 132-4 89 21 181-30M-4 300c76-58 99 46 166 2s92-39 132-4 89 21 181-30" />
+              <path class="river" d="M55 0c-13 49 53 56 44 102s-45 56-21 94 68 35 50 79 0 51 22 65" />
+              <circle class="map-dot" cx="248" cy="155" r="7"/><circle class="map-ring" cx="248" cy="155" r="19"/>
+              <path class="map-line" d="M248 155l58-52"/><text x="313" y="96">GONDANG</text>
+              <text class="north" x="380" y="42">N</text><path class="north-arrow" d="M385 51l-5 16h10z"/>
+            </svg>
+            <span class="map-caption">ILUSTRASI PETA · GONDANG</span>
+          </div>
+          <div class="atlas-footer"><div><small>TEMA PAMERAN</small><strong>Kecamatan Gondang</strong></div><span class="atlas-seal">✳</span></div>
+          <div class="resource-links">
+            <a href="#materi" data-placeholder><span class="resource-icon">↗</span><span><strong>Materi pameran</strong><small>URL belum tersedia · placeholder</small></span><span class="link-arrow">→</span></a>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Kecamatan+Gondang+Tulungagung" target="_blank" rel="noreferrer"><span class="resource-icon">⌖</span><span><strong>Jelajahi Gondang</strong><small>Buka lokasi di Google Maps</small></span><span class="link-arrow">↗</span></a>
+          </div>
+        </aside>
+        <div class="hero-footnote"><span>GEBYAR LITERASI 2025</span><span>MENJELAJAHI CERITA, MENEMUKAN MAKNA</span></div>
+      </section>
+
+      <section class="view form-view" data-view="register" hidden aria-labelledby="form-title">
+        <button class="back-link" data-go="home">← <span>Kembali ke halaman awal</span></button>
+        <div class="form-heading"><p class="eyebrow">GEBYAR LITERASI · GELAR KARYA</p><h1 id="form-title">Tinggalkan jejak<br /><em>kunjungan Anda.</em></h1><p>Silakan isi data berikut untuk melengkapi buku tamu kami.</p></div>
+        <form class="guest-form" id="guest-form" novalidate>
+          <div class="form-grid">
+            <label class="field field-wide">Nama lengkap <span class="required">*</span><input name="name" autocomplete="name" placeholder="Contoh: Alya Putri" required /><small class="field-error" aria-live="polite"></small></label>
+            <label class="field">Jabatan / Kelas <span class="required">*</span><input name="position" placeholder="Contoh: Guru / XI-2" required /><small class="field-error" aria-live="polite"></small></label>
+            <label class="field">NIS <span class="optional">(opsional)</span><input name="nis" inputmode="numeric" placeholder="Khusus peserta didik" /><small class="field-hint">Boleh dikosongkan oleh pengunjung non-siswa.</small></label>
+          </div>
+          <div class="signature-block"><div class="signature-heading"><div><label for="signature-canvas">Tanda tangan <span class="required">*</span></label><p>Bubuhkan tanda tangan di area terang ini.</p></div><button class="button button-text" type="button" id="clear-signature">Hapus tanda tangan</button></div><div class="signature-wrap"><canvas id="signature-canvas" aria-label="Area tanda tangan. Gunakan mouse, touchpad, atau layar sentuh."></canvas><span class="signature-placeholder" id="signature-placeholder">Tanda tangan di sini</span></div><small class="field-error" id="signature-error" aria-live="polite"></small></div>
+          <div class="form-submit"><span>Data Anda hanya digunakan untuk keperluan acara.</span><button class="button button-primary" type="submit">Kirim buku tamu <span aria-hidden="true">→</span></button></div>
+          <p class="demo-note form-status" id="form-status" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="view success-view" data-view="success" hidden aria-labelledby="success-title"><div class="success-emblem" aria-hidden="true">✓</div><p class="eyebrow">KUNJUNGAN TERCATAT</p><h1 id="success-title">Terima kasih telah<br /><em>menjadi bagian cerita.</em></h1><p class="success-copy">Kehadiran Anda membuat perayaan literasi ini semakin bermakna.</p><button class="button button-primary" data-go="home">Kembali ke halaman awal <span aria-hidden="true">→</span></button></section>
+
+      <footer class="site-footer"><span>© SMAN 1 BOYOLANGU</span><span>MERAWAT CERITA · MENUMBUHKAN LITERASI</span><span>GONDANG, JAWA TIMUR</span></footer>
+    </main>
+    <script type="module" src="assets/js/app.js"></script>
+  </body>
+</html>
